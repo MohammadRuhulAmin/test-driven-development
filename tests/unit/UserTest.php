@@ -3,7 +3,13 @@ use PHPUnit\Framework\TestCase;
 use App\Models\User;
 class UserTest extends TestCase{
 
-   public function test_get_the_first_name(){
+   
+
+
+/** @test  */
+    
+    
+    public function test_get_the_first_name(){
         $user = new User();
         $user->setFirstName('Ruhul Amin');
         $this->assertEquals($user->getFirstName(),'Ruhul Amin');
@@ -28,7 +34,7 @@ class UserTest extends TestCase{
             'Contact'=>"01403288711",
             'Address'=>"dhaka"
        ];
-
+ 
        $this->assertEquals($user->getRegularAddress(),$test_info);
    }
 
