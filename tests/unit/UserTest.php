@@ -20,5 +20,17 @@ class UserTest extends TestCase{
        $user->setLastName('Ruhul Amin');
        $this->assertEquals($user->getFullName(),'Mohammad Ruhul Amin');
    }
+   public function test_regular_info(){
+       $user = new User();
+       $user->setRegularAddress("Alfa@gmail.com","01403288711","dhaka");
+       $test_info=[
+            'EmailAddress'=>"Alfa@gmail.com",
+            'Contact'=>"01403288711",
+            'Address'=>"dhaka"
+       ];
+
+       $this->assertEquals($user->getRegularAddress(),$test_info);
+   }
+
 
 }
