@@ -21,7 +21,7 @@ class CollectionTest extends TestCase{
     /** @test */
     public function test_each_item(){
         $collection = new \App\Support\Collection(['1','2','3']);
-        $this->assertEquals($collection->get()[0],'1');
+        $this->assertEquals($collection->get()[0],'1'); 
         $this->assertEquals($collection->get()[1],'2');
     } 
 
